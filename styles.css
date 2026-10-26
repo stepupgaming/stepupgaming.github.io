@@ -597,9 +597,17 @@ ul {
   transition: opacity 0.2s ease, border-color 0.2s ease, background 0.2s ease;
 }
 
-.video-sound {
-  right: auto;
-  left: 12px;
+.video-controls {
+  position: absolute;
+  right: 28px;
+  bottom: 16px;
+  z-index: 2;
+  display: flex;
+  gap: 6px;
+}
+
+.video-controls .video-toggle {
+  position: static;
 }
 
 .video-sound[aria-pressed="true"] {
@@ -1877,9 +1885,9 @@ html.js .project-grid .reveal:nth-child(4) {
     padding-inline: 11px;
   }
 
-  .video-toggle {
-    right: 8px;
-    bottom: 8px;
+  .video-controls {
+    right: 22px;
+    bottom: 10px;
   }
 
   .frame-corner {
@@ -2077,6 +2085,9 @@ html.js .project-grid .reveal:nth-child(4) {
 }
 
 .timeline-scrub {
+  -webkit-appearance: none;
+  appearance: none;
+  background: transparent;
   position: absolute;
   inset: 0;
   width: 100%;

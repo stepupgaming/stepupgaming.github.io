@@ -31,7 +31,7 @@
   <link rel="preload" href="assets/fonts/archivo-latin.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="preload" href="assets/fonts/jetbrains-mono-latin.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="preload" href="assets/fonts/instrument-serif-latin.woff2" as="font" type="font/woff2" crossorigin>
-  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="styles.css?v=3">
   <script>document.documentElement.classList.add('js');</script>
   <noscript><style>.video-toggle, .copy-email { display: none; }</style></noscript>
 
@@ -127,13 +127,15 @@
                 <video class="hero-video" autoplay muted loop playsinline preload="metadata" poster="assets/director-reel-poster.jpg" aria-label="A 28-second reel rendered by Director from one HTML file: AI-generated film stills cut on the beat of generated music, with a motion-blurred whip pan, a 3D card turn and an audio-reactive equalizer.">
                   <source src="assets/director-reel.mp4" type="video/mp4">
                 </video>
-                <button class="video-toggle video-sound" type="button" aria-pressed="false" aria-label="Turn sound on">
-                  <span class="video-sound-text">Sound off</span>
-                </button>
-                <button class="video-toggle" type="button" aria-label="Pause the director render">
-                  <span class="video-toggle-icon" aria-hidden="true">&#10074;&#10074;</span>
-                  <span class="video-toggle-text">Pause</span>
-                </button>
+                <div class="video-controls">
+                  <button class="video-toggle video-sound" type="button" aria-pressed="false" aria-label="Turn sound on">
+                    <span class="video-sound-text">Sound off</span>
+                  </button>
+                  <button class="video-toggle" type="button" aria-label="Pause the director render">
+                    <span class="video-toggle-icon" aria-hidden="true">&#10074;&#10074;</span>
+                    <span class="video-toggle-text">Pause</span>
+                  </button>
+                </div>
                 <span class="frame-corner frame-corner--tl" aria-hidden="true"></span>
                 <span class="frame-corner frame-corner--tr" aria-hidden="true"></span>
                 <span class="frame-corner frame-corner--bl" aria-hidden="true"></span>
@@ -498,6 +500,6 @@
     </div>
   </footer>
 
-  <script src="main.js" defer></script>
+  <script src="main.js?v=3" defer></script>
 </body>
 </html>

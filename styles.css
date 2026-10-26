@@ -597,6 +597,16 @@ ul {
   transition: opacity 0.2s ease, border-color 0.2s ease, background 0.2s ease;
 }
 
+.video-sound {
+  right: auto;
+  left: 12px;
+}
+
+.video-sound[aria-pressed="true"] {
+  border-color: var(--accent);
+  color: var(--accent);
+}
+
 .video-toggle:hover {
   opacity: 1;
   border-color: var(--accent);
@@ -2064,4 +2074,24 @@ html.js .project-grid .reveal:nth-child(4) {
   font-size: 11px;
   line-height: 1.5;
   color: var(--muted);
+}
+
+.timeline-scrub {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  opacity: 0;
+  cursor: pointer;
+}
+
+.timeline-track:has(.timeline-scrub:focus-visible) .timeline-head {
+  outline: 2px solid var(--accent);
+  outline-offset: 3px;
+}
+
+.timeline.is-scrubbing .timeline-fill,
+.timeline.is-scrubbing .timeline-head {
+  transition: none;
 }

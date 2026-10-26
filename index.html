@@ -124,9 +124,12 @@
               </div>
 
               <div class="video-shell">
-                <video class="hero-video" autoplay muted loop playsinline preload="metadata" poster="assets/director-reel-poster.jpg" aria-label="A 28-second reel rendered by Director from one HTML file: AI-generated film stills cut on the beat of generated music, with a Lottie viewfinder, a motion-blurred whip pan, a 3D card turn and an audio-reactive equalizer.">
+                <video class="hero-video" autoplay muted loop playsinline preload="metadata" poster="assets/director-reel-poster.jpg" aria-label="A 28-second reel rendered by Director from one HTML file: AI-generated film stills cut on the beat of generated music, with a motion-blurred whip pan, a 3D card turn and an audio-reactive equalizer.">
                   <source src="assets/director-reel.mp4" type="video/mp4">
                 </video>
+                <button class="video-toggle video-sound" type="button" aria-pressed="false" aria-label="Turn sound on">
+                  <span class="video-sound-text">Sound off</span>
+                </button>
                 <button class="video-toggle" type="button" aria-label="Pause the director render">
                   <span class="video-toggle-icon" aria-hidden="true">&#10074;&#10074;</span>
                   <span class="video-toggle-text">Pause</span>
@@ -137,14 +140,15 @@
                 <span class="frame-corner frame-corner--br" aria-hidden="true"></span>
               </div>
 
-              <div class="timeline" aria-hidden="true">
-                <span class="timecode" data-current>00:00:00:00</span>
+              <div class="timeline">
+                <span class="timecode" data-current aria-hidden="true">00:00:00:00</span>
                 <div class="timeline-track">
-                  <span class="timeline-ticks"></span>
-                  <span class="timeline-fill"></span>
-                  <span class="timeline-head"></span>
+                  <span class="timeline-ticks" aria-hidden="true"></span>
+                  <span class="timeline-fill" aria-hidden="true"></span>
+                  <span class="timeline-head" aria-hidden="true"></span>
+                  <input class="timeline-scrub" type="range" min="0" max="1000" step="1" value="0" aria-label="Seek the director reel">
                 </div>
-                <span class="timecode" data-total>00:00:28:18</span>
+                <span class="timecode" data-total aria-hidden="true">00:00:28:18</span>
               </div>
 
               <div class="render-meta" aria-hidden="true">

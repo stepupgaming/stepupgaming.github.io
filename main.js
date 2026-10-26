@@ -141,7 +141,7 @@
   }
 
   var video = document.querySelector(".hero-video");
-  var videoToggle = document.querySelector(".video-toggle");
+  var videoToggle = document.querySelector(".video-toggle:not(.video-sound)");
   var timeline = document.querySelector(".timeline");
   var currentTime = document.querySelector("[data-current]");
   var totalTime = document.querySelector("[data-total]");
@@ -198,7 +198,40 @@
       }
     }
 
-    video.addEventListener("timeupdate", updateTimeline);
+    var scrub = document.querySelector(".timeline-scrub");
+    var soundToggle = document.querySelector(".video-sound");
+    var scrubbing = false;
+
+    if (scrub) {
+      scrub.addEventListener("input", function () {
+        if (!Number.isFinite(video.duration) || video.duration <= 0) return;
+        scrubbing = true;
+        if (timeline) timeline.classList.add("is-scrubbing");
+        video.currentTime = (Number(scrub.value) / 1000) * video.duration;
+        updateTimeline();
+      });
+      scrub.addEventListener("change", function () {
+        scrubbing = false;
+        if (timeline) timeline.classList.remove("is-scrubbing");
+      });
+    }
+
+    if (soundToggle) {
+      soundToggle.addEventListener("click", function () {
+        video.muted = !video.muted;
+        soundToggle.setAttribute("aria-pressed", String(!video.muted));
+        soundToggle.setAttribute("aria-label", video.muted ? "Turn sound on" : "Turn sound off");
+        soundToggle.querySelector(".video-sound-text").textContent = video.muted ? "Sound off" : "Sound on";
+        if (!video.muted && video.paused) video.play();
+      });
+    }
+
+    video.addEventListener("timeupdate", function () {
+      updateTimeline();
+      if (scrub && !scrubbing && video.duration > 0) {
+        scrub.value = String(Math.round((video.currentTime / video.duration) * 1000));
+      }
+    });
     video.addEventListener("play", function () {
       setVideoState(true);
     });

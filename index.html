@@ -4,32 +4,33 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Steven Figler | Software Engineer</title>
-  <meta name="description" content="Steven Figler is a software engineer in Connecticut. He builds native video tools in Rust, local-first AI products, and web applications.">
+  <meta name="description" content="Steven Figler ports ML models from PyTorch to Rust and Candle and builds the native software around them, including the first Rust port of Kyutai's Pocket TTS and Director, a native video engine.">
   <meta name="author" content="Steven Figler">
-  <meta name="theme-color" content="#080808">
-  <meta name="color-scheme" content="dark">
+  <meta name="theme-color" content="#f2eee6">
+  <meta name="color-scheme" content="light">
   <link rel="canonical" href="https://stepupgaming.github.io/">
 
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="Steven Figler">
   <meta property="og:locale" content="en_US">
   <meta property="og:title" content="Steven Figler | Software Engineer">
-  <meta property="og:description" content="I build the engine, then ship the product. Rust video tools, local-first AI products, and web applications.">
+  <meta property="og:description" content="Research code in, native software out. Rust and Candle model ports, a native video engine, and the apps around them.">
   <meta property="og:url" content="https://stepupgaming.github.io/">
   <meta property="og:image" content="https://stepupgaming.github.io/assets/og.jpg">
   <meta property="og:image:type" content="image/jpeg">
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="630">
-  <meta property="og:image:alt" content="Steven Figler, software engineer. I build the engine, then ship the product.">
+  <meta property="og:image:alt" content="Steven Figler, software engineer. Research code in, native software out.">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Steven Figler | Software Engineer">
-  <meta name="twitter:description" content="I build the engine, then ship the product. Rust video tools, local-first AI products, and web applications.">
+  <meta name="twitter:description" content="Research code in, native software out. Rust and Candle model ports, a native video engine, and the apps around them.">
   <meta name="twitter:image" content="https://stepupgaming.github.io/assets/og.jpg">
-  <meta name="twitter:image:alt" content="Steven Figler, software engineer. I build the engine, then ship the product.">
+  <meta name="twitter:image:alt" content="Steven Figler, software engineer. Research code in, native software out.">
 
   <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
   <link rel="preload" href="assets/fonts/archivo-latin.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="preload" href="assets/fonts/jetbrains-mono-latin.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="assets/fonts/instrument-serif-latin.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="stylesheet" href="styles.css">
   <script>document.documentElement.classList.add('js');</script>
   <noscript><style>.video-toggle, .copy-email { display: none; }</style></noscript>
@@ -42,14 +43,8 @@
     "url": "https://stepupgaming.github.io/",
     "email": "mailto:steve@stepupai.com",
     "jobTitle": "Software Engineer",
-    "address": {
-      "@type": "PostalAddress",
-      "addressLocality": "Wethersfield",
-      "addressRegion": "CT",
-      "addressCountry": "US"
-    },
     "sameAs": ["https://github.com/stepupgaming"],
-    "knowsAbout": ["Rust", "TypeScript", "Python", "video rendering", "local-first software", "AI tooling"]
+    "knowsAbout": ["Rust", "Candle", "PyTorch", "ML inference", "video rendering", "Tauri", "TypeScript", "Python"]
   }
   </script>
 </head>
@@ -62,7 +57,7 @@
         <span class="brand-mark" aria-hidden="true">SF</span>
         <span class="brand-text">
           <span class="brand-name">Steven Figler</span>
-          <span class="brand-role">Software engineer</span>
+          <span class="brand-role">Step Up Gaming</span>
         </span>
       </a>
 
@@ -88,17 +83,17 @@
         <div class="hero-head">
           <p class="eyebrow">
             <span class="status-dot" aria-hidden="true"></span>
-            <span>Open to software engineering roles</span>
+            <span>Open to engineering roles</span>
             <span class="eyebrow-sep" aria-hidden="true">/</span>
-            <span>Wethersfield, CT</span>
+            <span>Rust &middot; ML inference &middot; tooling</span>
           </p>
 
-          <h1 id="hero-title">I build the engine, <span class="accent">then ship<br class="hero-break"> the product.</span></h1>
+          <h1 id="hero-title">Research code in. <span class="accent">Native software out.</span></h1>
         </div>
 
         <div class="hero-grid">
           <div class="hero-copy">
-            <p class="hero-lede">I work in Rust, TypeScript, and Python. My projects run from a native video renderer to local-first AI tools. I care about frame timing, file formats, and whether the thing still works outside the demo.</p>
+            <p class="hero-lede">I&rsquo;m Steven Figler. I take models that only run in Python and port them to Rust and Candle, then build the software around them. I did the first Rust port of Kyutai&rsquo;s Pocket TTS. Right now I&rsquo;m building Director, a native video engine that agents drive over MCP.</p>
 
             <div class="hero-actions">
               <a class="button button-primary" href="#work">See selected work <span aria-hidden="true">&#8595;</span></a>
@@ -108,15 +103,15 @@
             <dl class="hero-facts">
               <div>
                 <dt>Focus</dt>
-                <dd>Systems and product</dd>
+                <dd>Model ports, inference</dd>
               </div>
               <div>
                 <dt>Stack</dt>
                 <dd>Rust / TypeScript / Python</dd>
               </div>
               <div>
-                <dt>Based</dt>
-                <dd>Connecticut</dd>
+                <dt>Ships as</dt>
+                <dd>CLI / Tauri / web / WASM</dd>
               </div>
             </dl>
           </div>
@@ -124,13 +119,13 @@
           <div class="hero-visual">
             <div class="render-frame">
               <div class="render-chrome">
-                <span class="render-title"><i class="rec-dot" aria-hidden="true"></i> director / render_001</span>
+                <span class="render-title"><i class="rec-dot" aria-hidden="true"></i> director / showreel</span>
                 <span class="render-spec">1920 &times; 1080 / 30 fps</span>
               </div>
 
               <div class="video-shell">
-                <video class="hero-video" autoplay muted loop playsinline preload="metadata" poster="assets/director-poster.jpg" aria-label="A short composition rendered by director. The frame reads: HTML becomes native video. CSS layout. Seekable motion. Director rendering.">
-                  <source src="assets/director-native-motion.mp4" type="video/mp4">
+                <video class="hero-video" autoplay muted loop playsinline preload="metadata" poster="assets/director-poster.jpg" aria-label="A 15-second showreel rendered by Director from one HTML file: kinetic type, a 3D tile grid, reflowing flexbox panels, and blend modes with backdrop blur.">
+                  <source src="assets/director-showreel.mp4" type="video/mp4">
                 </video>
                 <button class="video-toggle" type="button" aria-label="Pause the director render">
                   <span class="video-toggle-icon" aria-hidden="true">&#10074;&#10074;</span>
@@ -149,7 +144,7 @@
                   <span class="timeline-fill"></span>
                   <span class="timeline-head"></span>
                 </div>
-                <span class="timecode" data-total>00:00:03:00</span>
+                <span class="timecode" data-total>00:00:15:00</span>
               </div>
 
               <div class="render-meta" aria-hidden="true">
@@ -159,7 +154,7 @@
               </div>
             </div>
 
-            <p class="visual-note"><span class="note-mark" aria-hidden="true"></span>Actual output from <strong>director</strong>. No browser in the render loop.</p>
+            <p class="visual-note"><span class="note-mark" aria-hidden="true"></span>Every frame painted by <strong>Director</strong> from one HTML file. No browser.</p>
           </div>
         </div>
       </div>
@@ -169,14 +164,15 @@
       <div class="wrap toolchain-inner">
         <span class="toolchain-label">Toolchain</span>
         <span>Rust</span>
-        <span>TypeScript</span>
-        <span>Python</span>
+        <span>Candle</span>
+        <span>PyTorch</span>
+        <span>ONNX Runtime</span>
+        <span>WASM</span>
         <span>Skia</span>
         <span>Vulkan</span>
-        <span>FFmpeg</span>
-        <span>ComfyUI</span>
+        <span>Tauri</span>
         <span>Next.js</span>
-        <span>Astro</span>
+        <span>TypeScript</span>
       </div>
     </div>
 
@@ -185,22 +181,22 @@
         <div class="section-head reveal">
           <div class="section-head-copy">
             <p class="section-index">01 / Selected work</p>
-            <h2 id="work-title">Five projects, built end to end.</h2>
+            <h2 id="work-title">Things I built from the first commit.</h2>
           </div>
-          <p class="section-lede">A renderer, a thumbnail studio, a clipping tool, and two web products. I built each one from the first commit to the build people actually run.</p>
+          <p class="section-lede">A video engine, model ports to Rust, and the apps and sites built on them. Most of my work is turning research code into something you can install and run.</p>
         </div>
 
         <article class="project-featured reveal" aria-labelledby="project-director">
           <div class="project-featured-copy">
             <p class="project-kicker"><span>01</span> Systems</p>
-            <h3 id="project-director">director</h3>
-            <p class="project-tagline">A native video platform in Rust.</p>
-            <p class="project-body">director compiles Rhai scripts and HTML/CSS into native scene nodes. Taffy handles layout, Skia paints on CPU or Vulkan, and FFmpeg encodes. No browser in the render loop.</p>
+            <h3 id="project-director">Director</h3>
+            <p class="project-tagline">A native video engine that agents can drive.</p>
+            <p class="project-body">HTML/CSS and HyperFrames compositions compile into a typed scene document. A parallel renderer paints it with Skia on a CPU pool or on Vulkan, and FFmpeg encodes. <code>director-host</code> keeps a revisioned session with atomic patches, and <code>director-engine mcp</code> lets an agent open, patch, inspect and export a project over MCP.</p>
 
             <ul class="facts">
               <li><strong>102k</strong><span>lines of Rust</span></li>
+              <li><strong>2.13&times;</strong><span>faster 1080p export</span></li>
               <li><strong>10</strong><span>crates</span></li>
-              <li><strong>126</strong><span>commits</span></li>
             </ul>
 
             <div class="project-footer">
@@ -213,48 +209,128 @@
             <div class="pipeline">
               <div class="pipeline-step">
                 <span class="pipeline-index">01</span>
-                <div><strong>Input</strong><span>Rhai / HTML / HyperFrames</span></div>
+                <div><strong>Author</strong><span>HTML/CSS / HyperFrames</span></div>
                 <span class="pipeline-tag">source</span>
               </div>
               <div class="pipeline-connector"></div>
               <div class="pipeline-step">
                 <span class="pipeline-index">02</span>
-                <div><strong>Scene graph</strong><span>layout, text, media, animation</span></div>
+                <div><strong>Scene document</strong><span>typed, serializable, patchable</span></div>
                 <span class="pipeline-tag">compile</span>
               </div>
               <div class="pipeline-connector"></div>
               <div class="pipeline-step">
                 <span class="pipeline-index">03</span>
-                <div><strong>Paint</strong><span>Skia on CPU or Vulkan</span></div>
+                <div><strong>Render</strong><span>parallel Skia, CPU pool or Vulkan</span></div>
                 <span class="pipeline-tag">render</span>
               </div>
               <div class="pipeline-connector"></div>
               <div class="pipeline-step">
                 <span class="pipeline-index">04</span>
-                <div><strong>Encode</strong><span>FFmpeg / H.264 + audio</span></div>
-                <span class="pipeline-tag">export</span>
+                <div><strong>Host</strong><span>session, patches, MCP, export</span></div>
+                <span class="pipeline-tag">agent</span>
               </div>
             </div>
 
             <div class="terminal">
               <div class="terminal-bar"><span></span><span></span><span></span><em>director-engine</em></div>
-              <pre><code><span class="t-prompt">$</span> director-engine render scene.rhai -o out.mp4
-<span class="t-ok">&#10003;</span> layout   taffy   1920x1080
-<span class="t-ok">&#10003;</span> paint    skia    cpu
-<span class="t-ok">&#10003;</span> encode   ffmpeg  h264
-<span class="t-dim">duration 3.0s    30fps</span></code></pre>
+              <pre><code><span class="t-prompt">$</span> director-engine mcp
+<span class="t-dim">&rarr; open     showreel.html</span>
+<span class="t-dim">&rarr; patch    title.text "Real depth."</span>
+<span class="t-ok">&#10003;</span> rev 2    1 node changed
+<span class="t-dim">&rarr; export   out.mp4 --gpu</span>
+<span class="t-ok">&#10003;</span> 450 frames  vulkan  h264</code></pre>
             </div>
           </div>
         </article>
 
         <div class="project-grid">
-          <article class="project-card span-7 reveal" style="--project-accent: #d7ff3f;" aria-labelledby="project-nofacetube">
+          <article class="project-card span-7 reveal" aria-labelledby="project-pockettts">
+            <div class="project-media project-media--ink">
+              <div class="terminal terminal--card">
+                <div class="terminal-bar"><span></span><span></span><span></span><em>pocket-tts</em></div>
+                <pre><code><span class="t-prompt">$</span> pocket-tts serve --int8
+<span class="t-ok">&#10003;</span> model    pocket-tts  candle  cpu
+<span class="t-ok">&#10003;</span> api      /v1/audio/speech  (OpenAI-compatible)
+<span class="t-dim">&rarr; "Research code in. Native software out."</span>
+<span class="t-ok">&#10003;</span> streaming  first chunk  RTF 0.33
+<span class="t-dim">no Python. one binary. also runs in WASM.</span></code></pre>
+              </div>
+              <span class="media-badge">128 stars</span>
+            </div>
+            <div class="project-card-body">
+              <p class="project-kicker"><span>02</span> Model port</p>
+              <h3 id="project-pockettts">Pocket TTS in Rust</h3>
+              <p class="project-tagline">The first Rust port of Kyutai&rsquo;s Pocket TTS.</p>
+              <p class="project-body">I rewrote Kyutai&rsquo;s Python text-to-speech model in Rust on Candle. It ships as one binary with streaming output, int8 weights, an OpenAI-compatible HTTP API, a React web UI, Python bindings and a WASM build for the browser. About 3&times; real time on CPU and 6&times; on Metal.</p>
+              <ul class="tags">
+                <li>Rust</li>
+                <li>Candle</li>
+                <li>WASM</li>
+              </ul>
+              <div class="project-footer">
+                <a class="text-link" href="https://github.com/stepupgaming/pocket-tts" target="_blank" rel="noopener">Source <span aria-hidden="true">&#8599;</span></a>
+                <span class="pill">29 forks</span>
+              </div>
+            </div>
+          </article>
+
+          <article class="project-card span-5 reveal" aria-labelledby="project-ports">
+            <div class="project-card-body">
+              <p class="project-kicker"><span>03</span> More ports</p>
+              <h3 id="project-ports">PyTorch to Rust, repeatedly</h3>
+              <p class="project-tagline">Speech, TTS and tooling for porting itself.</p>
+              <ul class="ports-list">
+                <li>
+                  <a href="https://github.com/stepupgaming/parakeet-candle" target="_blank" rel="noopener">parakeet-candle <span aria-hidden="true">&#8599;</span></a>
+                  <p>NVIDIA Parakeet TDT 0.6B speech-to-text on Candle, v2 English and v3 multilingual, with token, word and sentence timestamps.</p>
+                </li>
+                <li>
+                  <a href="https://github.com/stepupgaming/pycandle" target="_blank" rel="noopener">pycandle <span aria-hidden="true">&#8599;</span></a>
+                  <p>A transpiler from PyTorch (via torch.fx) to Candle Rust. It solves einsum, checks shapes and switches to flash attention.</p>
+                </li>
+                <li>
+                  <a href="https://github.com/stepupgaming/ort-chatterbox" target="_blank" rel="noopener">ort-chatterbox <span aria-hidden="true">&#8599;</span></a>
+                  <p>Chatterbox Turbo TTS in Rust on ONNX Runtime: zero-shot voice cloning, FP32/FP16/Q8, streaming.</p>
+                </li>
+                <li>
+                  <span class="ports-private">MiniMax H3</span>
+                  <p>A Candle and PyTorch port of MiniMax H3. Private for now.</p>
+                </li>
+              </ul>
+            </div>
+          </article>
+
+          <article class="project-card span-5 reveal" aria-labelledby="project-thumbforge">
+            <div class="project-media">
+              <img src="assets/shots/thumbforge.webp" width="1440" height="900" alt="ThumbForge's storyboard view: four planned thumbnail layouts (big number, versus, face plus words, before and after) for a brief about a cheap knife versus a chef knife." loading="lazy" decoding="async">
+              <span class="media-badge">App screenshot</span>
+            </div>
+            <div class="project-card-body">
+              <p class="project-kicker"><span>04</span> AI product</p>
+              <h3 id="project-thumbforge">ThumbForge</h3>
+              <p class="project-tagline">A local-first thumbnail studio for Qwen-Image.</p>
+              <p class="project-body">Runs Qwen-Image-2.1 on your own ComfyUI. A brief becomes a storyboard of layouts, then drafts, then a feed check that scores contrast, focal point and phone-size legibility before an export that stays under YouTube&rsquo;s 2 MB limit.</p>
+              <ul class="tags">
+                <li>Python</li>
+                <li>FastAPI</li>
+                <li>Next.js</li>
+                <li>ComfyUI</li>
+              </ul>
+              <div class="project-footer">
+                <span class="pill">Desktop app</span>
+                <span class="pill">Source private</span>
+              </div>
+            </div>
+          </article>
+
+          <article class="project-card span-7 reveal" aria-labelledby="project-nofacetube">
             <div class="project-media">
               <img src="assets/shots/nofacetube.webp" width="1400" height="875" alt="The NoFaceTube.com homepage, showing the headline Faceless video that holds up and a preview of the Clean Take app." loading="lazy" decoding="async">
               <span class="media-badge">Live site</span>
             </div>
             <div class="project-card-body">
-              <p class="project-kicker"><span>02</span> Web product</p>
+              <p class="project-kicker"><span>05</span> Web product</p>
               <h3 id="project-nofacetube">NoFaceTube</h3>
               <p class="project-tagline">A reference site for faceless video, built to be cited.</p>
               <p class="project-body">An editorial site with a public quality rubric, a dated tracker of platform rules, and niche guides. Astro content collections, React islands, and a Cloudflare Worker for forms and access.</p>
@@ -270,65 +346,13 @@
             </div>
           </article>
 
-          <article class="project-card span-5 reveal" style="--project-accent: #b69cff;" aria-labelledby="project-thumbforge">
-            <div class="project-media project-media--forge">
-              <div class="forge-art" aria-hidden="true">
-                <div class="forge-top">
-                  <span class="forge-brand">THUMBFORGE</span>
-                  <span class="forge-status">LOCAL / QWEN 2.1</span>
-                </div>
-                <div class="forge-stage">
-                  <div class="thumb-card thumb-card--back">
-                    <span class="thumb-kicker">02 / VARIANT</span>
-                    <strong>7 AI TOOLS, TESTED</strong>
-                    <span class="thumb-sub">WHAT ACTUALLY WORKED</span>
-                  </div>
-                  <div class="thumb-card thumb-card--mid">
-                    <span class="thumb-kicker">01 / RECIPE</span>
-                    <strong>STOP LOSING VIEWERS</strong>
-                    <span class="thumb-sub">THE FIRST 3 SECONDS</span>
-                  </div>
-                  <div class="thumb-card thumb-card--front">
-                    <span class="thumb-kicker">03 / SELECTED</span>
-                    <strong>MAKE THE FIRST FRAME COUNT</strong>
-                    <span class="thumb-sub">A THUMBNAIL STUDY</span>
-                    <span class="thumb-corner">16:9</span>
-                  </div>
-                  <div class="analyzer">
-                    <span class="analyzer-title">FEED CHECK</span>
-                    <div><span>contrast</span><i style="--value: 84%"></i><b>84</b></div>
-                    <div><span>focal point</span><i style="--value: 91%"></i><b>91</b></div>
-                    <div><span>text</span><i style="--value: 72%"></i><b>3 words</b></div>
-                  </div>
-                </div>
-                <div class="forge-bottom"><span>1280 &times; 720</span><span>under 2 MB</span><span>export ready</span></div>
-              </div>
-            </div>
-            <div class="project-card-body">
-              <p class="project-kicker"><span>03</span> AI product</p>
-              <h3 id="project-thumbforge">ThumbForge</h3>
-              <p class="project-tagline">A local-first thumbnail studio for Qwen-Image.</p>
-              <p class="project-body">Runs Qwen-Image-2.1 on your own ComfyUI. Recipes, up to 10 reference images, a layered canvas, feed-size checks, and an export that stays under YouTube's 2 MB limit.</p>
-              <ul class="tags">
-                <li>Python</li>
-                <li>FastAPI</li>
-                <li>Next.js</li>
-                <li>ComfyUI</li>
-              </ul>
-              <div class="project-footer">
-                <span class="pill">Desktop app</span>
-                <span class="pill">Source private</span>
-              </div>
-            </div>
-          </article>
-
-          <article class="project-card span-5 reveal" style="--project-accent: #ffd84d;" aria-labelledby="project-clipfactory">
-            <div class="project-media project-media--clipfactory">
+          <article class="project-card span-5 reveal" aria-labelledby="project-clipfactory">
+            <div class="project-media">
               <img src="assets/shots/clipfactory.webp" width="1400" height="875" alt="The ClipFactory demo homepage, showing a vertical clip preview, a clip record panel, and the local-first feature summary." loading="lazy" decoding="async">
               <span class="media-badge">Live demo</span>
             </div>
             <div class="project-card-body">
-              <p class="project-kicker"><span>04</span> Video tool</p>
+              <p class="project-kicker"><span>06</span> Video tool</p>
               <h3 id="project-clipfactory">ClipFactory</h3>
               <p class="project-tagline">Long footage in. Vertical clips out. Locally.</p>
               <p class="project-body">Transcript-first selection, multi-beat FFmpeg rendering, and deterministic QA gates. The public demo shows the selection flow in the browser, with no upload and no backend.</p>
@@ -344,16 +368,16 @@
             </div>
           </article>
 
-          <article class="project-card span-7 reveal" style="--project-accent: #ff8a3d;" aria-labelledby="project-stepup">
-            <div class="project-media project-media--stepup">
+          <article class="project-card span-7 reveal" aria-labelledby="project-stepup">
+            <div class="project-media">
               <img src="assets/shots/stepupai.webp" width="1400" height="875" alt="The StepUpAI homepage, showing the headline Launch your own slot game and a grid of orange tiles." loading="lazy" decoding="async">
               <span class="media-badge">Live site</span>
             </div>
             <div class="project-card-body">
-              <p class="project-kicker"><span>05</span> Studio and publishing</p>
-              <h3 id="project-stepup">Step Up</h3>
-              <p class="project-tagline">A one-person media company, run as software.</p>
-              <p class="project-body">StepUpAI runs the game studio, marketplace, and publishing label behind Step Up Gaming. I built the site, the content pipeline, and the internal tools that keep it operating without a team.</p>
+              <p class="project-kicker"><span>07</span> Studio</p>
+              <h3 id="project-stepup">Step Up Gaming</h3>
+              <p class="project-tagline">The name on my GitHub, and the studio I run as software.</p>
+              <p class="project-body">StepUpAI runs the game studio, marketplace and publishing label behind Step Up Gaming. I built the site, the content pipeline and the internal tools that keep it running without a team.</p>
               <ul class="tags">
                 <li>Next.js</li>
                 <li>React</li>
@@ -368,7 +392,16 @@
           </article>
         </div>
 
-        <p class="work-more reveal">More repositories on <a href="https://github.com/stepupgaming" target="_blank" rel="noopener">GitHub <span aria-hidden="true">&#8599;</span></a>.</p>
+        <div class="also reveal">
+          <p class="mono">Also built</p>
+          <ul>
+            <li><a href="https://github.com/stepupgaming/VNCCS-Desktop" target="_blank" rel="noopener">VNCCS-Desktop</a> A Tauri and Next.js desktop app around the VNCCS ComfyUI pack.</li>
+            <li><a href="https://github.com/stepupgaming/magenta-windows" target="_blank" rel="noopener">magenta-windows</a> A Windows player for Google&rsquo;s Magenta RealTime music model.</li>
+            <li><a href="https://github.com/stepupgaming/comfy-workflows" target="_blank" rel="noopener">comfy-workflows</a> Typed, code-first ComfyUI workflows.</li>
+            <li><a href="https://github.com/stepupgaming/tauri-rustdocs-candle" target="_blank" rel="noopener">tauri-rustdocs-candle</a> Semantic search over rustdoc with a Candle embedding model, plus an MCP server.</li>
+            <li><a href="https://github.com/stepupgaming/grits" target="_blank" rel="noopener">grits</a> A Git-native issue tracker for AI agents.</li>
+          </ul>
+        </div>
       </div>
     </section>
 
@@ -382,17 +415,17 @@
           </div>
 
           <div class="about-copy reveal">
-            <p>I'm Steven, a self-taught software engineer in Wethersfield, Connecticut. I started by building tools for my own work, then kept going until they became products: a rendering engine, a thumbnail studio, a clipping pipeline, a publishing site.</p>
+            <p>I&rsquo;m Steven, a self-taught engineer. I work under the name Step Up Gaming, though most of what I build now has nothing to do with games. It started with tools for my own work and grew into model ports, a rendering engine and the products on top of them.</p>
             <p>I like the part after the prototype. When the edge cases show up, the frame budget gets tight, and the build has to work on a machine that isn't mine. That's usually where the interesting engineering is.</p>
 
             <div class="now-grid">
               <div>
                 <span class="mono">Currently</span>
-                <p>Building <strong>director</strong>, a pre-release Rust video platform.</p>
+                <p>Building <strong>Director</strong>&rsquo;s agent surface, and porting models to Candle.</p>
               </div>
               <div>
                 <span class="mono">Open to</span>
-                <p>Software engineering roles. Remote or Connecticut.</p>
+                <p>Engineering roles on inference, tooling or developer products.</p>
               </div>
             </div>
           </div>
@@ -416,8 +449,8 @@
           </div>
           <div class="capability">
             <span class="mono">04</span>
-            <h3>AI</h3>
-            <p>ComfyUI, local models, workflow compilers, image and video generation.</p>
+            <h3>ML</h3>
+            <p>PyTorch to Candle ports, ONNX Runtime, quantization, WASM inference, ComfyUI.</p>
           </div>
         </div>
 
@@ -440,7 +473,7 @@
           </div>
 
           <div class="contact-copy reveal">
-            <p>I'm open to software engineering roles and selective freelance work. Remote, or somewhere in Connecticut.</p>
+            <p>I&rsquo;m open to engineering roles and selective contract work.</p>
             <a class="email-link" href="mailto:steve@stepupai.com">steve@stepupai.com <span aria-hidden="true">&#8599;</span></a>
             <button class="copy-email" type="button" data-email="steve@stepupai.com">Copy email</button>
 

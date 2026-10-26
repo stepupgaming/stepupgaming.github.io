@@ -184,6 +184,14 @@
   }
 
   if (video) {
+    // Browsers shrink video with a cheap filter that drops thin strokes, so pick the
+    // encode closest to the player's device-pixel width.
+    var source = video.querySelector("source[data-small]");
+    if (source && video.clientWidth * (window.devicePixelRatio || 1) <= 760) {
+      source.src = source.getAttribute("data-small");
+      video.load();
+    }
+
     if (prefersReducedMotion.matches) {
       video.removeAttribute("autoplay");
       video.pause();

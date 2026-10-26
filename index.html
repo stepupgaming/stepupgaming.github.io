@@ -124,8 +124,8 @@
               </div>
 
               <div class="video-shell">
-                <video class="hero-video" autoplay muted loop playsinline preload="metadata" poster="assets/director-poster.jpg" aria-label="A 15-second showreel rendered by Director from one HTML file: kinetic type, a 3D tile grid, reflowing flexbox panels, and blend modes with backdrop blur.">
-                  <source src="assets/director-showreel.mp4" type="video/mp4">
+                <video class="hero-video" autoplay muted loop playsinline preload="metadata" poster="assets/director-reel-poster.jpg" aria-label="A 28-second reel rendered by Director from one HTML file: AI-generated film stills cut on the beat of generated music, with a Lottie viewfinder, a motion-blurred whip pan, a 3D card turn and an audio-reactive equalizer.">
+                  <source src="assets/director-reel.mp4" type="video/mp4">
                 </video>
                 <button class="video-toggle" type="button" aria-label="Pause the director render">
                   <span class="video-toggle-icon" aria-hidden="true">&#10074;&#10074;</span>
@@ -144,7 +144,7 @@
                   <span class="timeline-fill"></span>
                   <span class="timeline-head"></span>
                 </div>
-                <span class="timecode" data-total>00:00:15:00</span>
+                <span class="timecode" data-total>00:00:28:18</span>
               </div>
 
               <div class="render-meta" aria-hidden="true">
@@ -154,7 +154,7 @@
               </div>
             </div>
 
-            <p class="visual-note"><span class="note-mark" aria-hidden="true"></span>Every frame painted by <strong>Director</strong> from one HTML file. No browser.</p>
+            <p class="visual-note"><span class="note-mark" aria-hidden="true"></span>Every frame painted by <strong>Director</strong> from one HTML file. Stills from Moss Image, score from Magenta RealTime.</p>
           </div>
         </div>
       </div>
@@ -205,7 +205,7 @@
             </div>
           </div>
 
-          <div class="project-featured-visual" aria-hidden="true">
+          <div class="project-featured-visual">
             <div class="pipeline">
               <div class="pipeline-step">
                 <span class="pipeline-index">01</span>
@@ -232,15 +232,12 @@
               </div>
             </div>
 
-            <div class="terminal">
-              <div class="terminal-bar"><span></span><span></span><span></span><em>director-engine</em></div>
-              <pre><code><span class="t-prompt">$</span> director-engine mcp
-<span class="t-dim">&rarr; open     showreel.html</span>
-<span class="t-dim">&rarr; patch    title.text "Real depth."</span>
-<span class="t-ok">&#10003;</span> rev 2    1 node changed
-<span class="t-dim">&rarr; export   out.mp4 --gpu</span>
-<span class="t-ok">&#10003;</span> 450 frames  vulkan  h264</code></pre>
-            </div>
+            <figure class="agent-demo">
+              <video class="agent-video" muted loop playsinline preload="none" poster="assets/director-agent-poster.jpg" aria-label="A real MCP session: an agent opens a Director scene, patches the title, colors, layout and timing, renders a frame after each patch, gets a revision conflict, runs QA and exports.">
+                <source src="assets/director-agent.mp4" type="video/mp4">
+              </video>
+              <figcaption>A real <code>director-engine mcp</code> session. About 11 ms per patch, 160 ms per 1080p frame on CPU.</figcaption>
+            </figure>
           </div>
         </article>
 

@@ -2046,3 +2046,22 @@ html.js .project-grid .reveal:nth-child(4) {
     transform: none;
   }
 }
+
+.agent-demo {
+  margin: 20px 0 0;
+}
+
+.agent-video {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  border: 1px solid var(--line);
+  background: #0b0b0c;
+}
+
+.agent-demo figcaption {
+  margin-top: 10px;
+  font-family: var(--mono);
+  font-size: 11px;
+  line-height: 1.5;
+  color: var(--muted);
+}

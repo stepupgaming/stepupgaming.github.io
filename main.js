@@ -284,6 +284,28 @@
     });
   }
 
+  var agentVideo = document.querySelector(".agent-video");
+  if (agentVideo) {
+    if (prefersReducedMotion.matches || !("IntersectionObserver" in window)) {
+      agentVideo.controls = true;
+    } else {
+      new IntersectionObserver(
+        function (entries) {
+          entries.forEach(function (entry) {
+            if (entry.isIntersecting) {
+              agentVideo.play().catch(function () {
+                agentVideo.controls = true;
+              });
+            } else {
+              agentVideo.pause();
+            }
+          });
+        },
+        { threshold: 0.4 }
+      ).observe(agentVideo);
+    }
+  }
+
   document.querySelectorAll("[data-year]").forEach(function (element) {
     element.textContent = String(new Date().getFullYear());
   });

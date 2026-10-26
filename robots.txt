@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://stepupgaming.github.io/sitemap.xml

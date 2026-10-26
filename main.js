@@ -183,14 +183,19 @@
     if (totalTime) totalTime.textContent = formatTimecode(duration);
   }
 
-  if (video) {
-    // Browsers shrink video with a cheap filter that drops thin strokes, so pick the
-    // encode closest to the player's device-pixel width.
-    var source = video.querySelector("source[data-small]");
-    if (source && video.clientWidth * (window.devicePixelRatio || 1) <= 760) {
+  // Browsers shrink video with a cheap filter that drops thin strokes, so each player
+  // gets the encode closest to its device-pixel width. data-small is half the main width.
+  document.querySelectorAll("video").forEach(function (player) {
+    var source = player.querySelector("source[data-small]");
+    if (!source) return;
+    var full = player.classList.contains("hero-video") ? 1280 : 1120;
+    if (player.clientWidth * (window.devicePixelRatio || 1) <= full * 0.6) {
       source.src = source.getAttribute("data-small");
-      video.load();
+      player.load();
     }
+  });
+
+  if (video) {
 
     if (prefersReducedMotion.matches) {
       video.removeAttribute("autoplay");

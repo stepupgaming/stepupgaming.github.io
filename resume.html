@@ -1,0 +1,116 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Steven Figler, Resume</title>
+<meta name="robots" content="noindex">
+<style>
+  @font-face { font-family: "Archivo"; src: url("assets/fonts/archivo-latin.woff2") format("woff2"); font-weight: 100 900; font-stretch: 75% 125%; }
+  @font-face { font-family: "JetBrains Mono"; src: url("assets/fonts/jetbrains-mono-latin.woff2") format("woff2"); font-weight: 100 800; }
+  @page { size: Letter; margin: 0.42in 0.55in; }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { font: 9.4pt/1.36 "Archivo", system-ui, sans-serif; color: #1c1a17; background: #fff; }
+  .page { max-width: 7.3in; margin: 0 auto; }
+  header { display: flex; justify-content: space-between; align-items: flex-end; border-bottom: 2px solid #1c1a17; padding-bottom: 8px; }
+  h1 { font-size: 24pt; line-height: 1; letter-spacing: -0.02em; font-weight: 700; }
+  .role { font-size: 10.5pt; margin-top: 4px; color: #4a453e; }
+  .contact { text-align: right; font: 8.4pt/1.6 "JetBrains Mono", monospace; }
+  .contact a { color: inherit; text-decoration: none; }
+  h2 { font: 600 8pt "JetBrains Mono", monospace; letter-spacing: 0.14em; text-transform: uppercase; color: #3b4fd8; margin: 11px 0 5px; }
+  .summary { margin-top: 10px; }
+  .skills { display: grid; grid-template-columns: 1.15in 1fr; gap: 2px 10px; }
+  .skills dt { font-weight: 600; }
+  .proj { margin-bottom: 6px; break-inside: avoid; }
+  .proj-head { display: flex; justify-content: space-between; align-items: baseline; gap: 10px; }
+  .proj h3 { font-size: 10.4pt; font-weight: 700; }
+  .proj h3 span { font-weight: 400; color: #4a453e; }
+  .link { font: 7.8pt "JetBrains Mono", monospace; color: #4a453e; white-space: nowrap; }
+  ul { padding-left: 14px; margin-top: 2px; }
+  li { margin-bottom: 1px; }
+  .stack { font: 7.8pt "JetBrains Mono", monospace; color: #6b655b; margin-top: 1px; }
+  .also li { margin-bottom: 0; }
+</style>
+</head>
+<body>
+<div class="page">
+  <header>
+    <div>
+      <h1>Steven Figler</h1>
+      <div class="role">Independent software engineer · Rust, ML inference, media systems</div>
+    </div>
+    <div class="contact">
+      <a href="mailto:steve@stepupai.com">steve@stepupai.com</a><br>
+      <a href="https://github.com/stepupgaming">github.com/stepupgaming</a><br>
+      <a href="https://stepupgaming.github.io">stepupgaming.github.io</a>
+    </div>
+  </header>
+
+  <p class="summary">I turn research code into software people can install and run. Since 2021 I have built, on my own and under the Step Up Gaming name, a native video engine that AI agents drive over MCP, Rust ports of open speech and TTS models, and the products and sites built on top of them, from first commit to deployment.</p>
+
+  <h2>Skills</h2>
+  <dl class="skills">
+    <dt>Languages</dt><dd>Rust, Python, TypeScript / JavaScript, HTML/CSS, SQL</dd>
+    <dt>ML &amp; inference</dt><dd>Candle, ONNX Runtime, PyTorch (torch.fx), quantization (int8/Q8/FP16), WASM inference, ComfyUI, Qwen-Image</dd>
+    <dt>Systems &amp; media</dt><dd>Skia, Vulkan, FFmpeg, audio DSP, parallel rendering, MCP servers, agent tooling</dd>
+    <dt>Web &amp; infra</dt><dd>Next.js, React, Astro, FastAPI, Tauri, Cloudflare Workers / D1, GitHub Actions, Git</dd>
+  </dl>
+
+  <h2>Projects · Step Up Gaming, 2021 – present</h2>
+
+  <div class="proj">
+    <div class="proj-head"><h3>Director <span>· native video engine that agents can drive</span></h3><span class="link">github.com/stepupgaming/director</span></div>
+    <ul>
+      <li>Compiles HTML/CSS and HyperFrames compositions into a typed, patchable scene document; a parallel Skia renderer paints it on a CPU pool or Vulkan and FFmpeg encodes. 102k lines of Rust across 10 crates.</li>
+      <li>2.13× faster 1080p export; supports 3D transforms with depth sorting, backdrop blur, masks, blend modes, text and audio mixing.</li>
+      <li>Built an MCP server and revisioned host session: agents open, patch, inspect and export projects at about 11 ms per patch and 160 ms per 1080p frame on CPU.</li>
+    </ul>
+  </div>
+
+  <div class="proj">
+    <div class="proj-head"><h3>Pocket TTS in Rust <span>· first Rust port of Kyutai's Pocket TTS</span></h3><span class="link">128 stars · 29 forks</span></div>
+    <ul>
+      <li>Rewrote the Python model in Rust on Candle: one binary, streaming output (RTF 0.33), int8 weights, an OpenAI-compatible HTTP API, a React web UI, Python bindings and a WASM build. About 3× real time on CPU, 6× on Metal.</li>
+    </ul>
+  </div>
+
+  <div class="proj">
+    <div class="proj-head"><h3>More model ports <span>· PyTorch to Rust</span></h3><span class="link">github.com/stepupgaming</span></div>
+    <ul>
+      <li><b>parakeet-candle:</b> NVIDIA Parakeet TDT 0.6B speech-to-text on Candle (v2 English, v3 multilingual) with token, word and sentence timestamps.</li>
+      <li><b>pycandle:</b> transpiler from PyTorch (via torch.fx) to Candle Rust; solves einsum, checks shapes, switches to flash attention.</li>
+      <li><b>ort-chatterbox:</b> Chatterbox Turbo TTS on ONNX Runtime with zero-shot voice cloning, FP32/FP16/Q8 and streaming. Also a private MiniMax H3 port.</li>
+    </ul>
+  </div>
+
+  <div class="proj">
+    <div class="proj-head"><h3>ThumbForge <span>· local-first AI thumbnail studio</span></h3><span class="link">desktop app</span></div>
+    <ul>
+      <li>Runs Qwen-Image-2.1 on the user's own ComfyUI: a brief becomes a storyboard, then drafts, then an automated feed check scoring contrast, focal point and phone-size legibility. Python, FastAPI, Next.js.</li>
+    </ul>
+  </div>
+
+  <div class="proj">
+    <div class="proj-head"><h3>ClipFactory <span>· local batch clipper for vertical video</span></h3><span class="link">stepupgaming.github.io/clipfactory</span></div>
+    <ul>
+      <li>Transcript-first clip selection, multi-beat FFmpeg rendering, deterministic QA gates and style transfer from a reference video; 482 tests. Public demo runs fully in the browser.</li>
+    </ul>
+  </div>
+
+  <div class="proj">
+    <div class="proj-head"><h3>NoFaceTube &amp; StepUpAI <span>· production web products</span></h3><span class="link">nofacetube.com · stepupai.com</span></div>
+    <ul>
+      <li>NoFaceTube: editorial reference site with a public quality rubric and dated platform-rules tracker (Astro 5, React islands, Cloudflare Worker + D1).</li>
+      <li>StepUpAI: site, content pipeline and internal tools for the studio, run without a team (Next.js, React, TypeScript, Cloudflare).</li>
+    </ul>
+  </div>
+
+  <h2>Also built</h2>
+  <ul class="also">
+    <li><b>grits</b>, a Git-native issue tracker for AI agents · <b>comfy-workflows</b>, typed code-first ComfyUI workflows · <b>magenta-windows</b>, a Windows player for Magenta RealTime · <b>VNCCS-Desktop</b> (Tauri, Next.js) · <b>tauri-rustdocs-candle</b>, semantic rustdoc search</li>
+  </ul>
+
+  <h2>Education</h2>
+  <p>Self-directed: Rust systems programming, ML inference and model porting (2021 – present) · High school diploma</p>
+</div>
+</body>
+</html>

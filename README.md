@@ -1,4 +1,4 @@
-# Steven Figler, portfolio
+# Step Up Gaming, portfolio
 
 The source for my personal portfolio at [stepupgaming.github.io](https://stepupgaming.github.io/).
 
